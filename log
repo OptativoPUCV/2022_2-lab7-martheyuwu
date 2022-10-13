@@ -159,3 +159,14 @@ heap.c:37:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attri
 heap.c:37:18: error: expected expression before ‘->’ token
 Compilation failed
 9c0b8ff
+Thu 13 Oct 2022 06:33:09 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:37:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+   37 |   heapElem *crear.heapArray=(heapElem*)(sizeof(heapElem));
+      |                  ^
+heap.c:37:18: error: expected expression before ‘.’ token
+Compilation failed
+3566c89
