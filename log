@@ -111,3 +111,14 @@ Thu 13 Oct 2022 06:20:46 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 4220131
+Thu 13 Oct 2022 06:22:46 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:38:8: error: ‘crear’ is a pointer; did you mean to use ‘->’?
+   38 |   crear.heapArray=array;
+      |        ^
+      |        ->
+Compilation failed
+903ddc8
