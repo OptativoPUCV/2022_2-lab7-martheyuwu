@@ -122,3 +122,8 @@ heap.c:38:8: error: ‘crear’ is a pointer; did you mean to use ‘->’?
       |        ->
 Compilation failed
 903ddc8
+Thu 13 Oct 2022 06:24:05 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+0a4b31e
