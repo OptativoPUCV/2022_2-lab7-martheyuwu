@@ -36,3 +36,29 @@ heap.c:41:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 3ab3757
+Thu 13 Oct 2022 06:15:04 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:38:8: error: ‘crear’ is a pointer; did you mean to use ‘->’?
+   38 |   crear.heapArray=array;
+      |        ^
+      |        ->
+heap.c:39:8: error: ‘crear’ is a pointer; did you mean to use ‘->’?
+   39 |   crear.size=0;
+      |        ^
+      |        ->
+heap.c:40:8: error: ‘crear’ is a pointer; did you mean to use ‘->’?
+   40 |   crear.capac=3;
+      |        ^
+      |        ->
+heap.c:36:9: error: variable ‘crear’ set but not used [-Werror=unused-but-set-variable]
+   36 |   Heap *crear=(Heap*)malloc(sizeof(Heap));
+      |         ^~~~~
+heap.c:41:1: error: control reaches end of non-void function [-Werror=return-type]
+   41 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+bb58ec2
