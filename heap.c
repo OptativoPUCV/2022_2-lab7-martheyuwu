@@ -26,8 +26,8 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-    pq->heapArray[pq->size+1].data=data;
-    pq->heapArray[pq->size+1].priority=priority;
+    pq->heapArray[pq->size].data=data;
+    pq->heapArray[pq->size].priority=priority;
 }
 
 
