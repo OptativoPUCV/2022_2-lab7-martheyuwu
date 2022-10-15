@@ -363,3 +363,13 @@ heap.c:29:18: error: invalid initializer
       |                  ^
 Compilation failed
 40fcf0f
+Sat 15 Oct 2022 06:57:28 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:29:5: error: conversion to non-scalar type requested
+   29 |     heapElem aux=(heapElem)malloc(sizeof(heapElem));
+      |     ^~~~~~~~
+Compilation failed
+5682cab
