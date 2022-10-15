@@ -26,7 +26,7 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-    heapElem *aux=(heapElem*)calloc(0,sizeof(heapElem));
+    heapElem aux;
     pq->heapArray[pq->size].data=data;
     pq->heapArray[pq->size].priority=priority;
     pq->size++;
