@@ -568,3 +568,20 @@ Sat 15 Oct 2022 07:33:11 PM UTC:
  tests:  4|2
 total_score: 30/70
 0394ec7
+Sat 15 Oct 2022 07:39:13 PM UTC: 
+ heap.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:34:5: error: expected ‘,’ or ‘;’ before ‘while’
+   34 |     while (1){
+      |     ^~~~~
+heap.c:33:9: error: unused variable ‘pos’ [-Werror=unused-variable]
+   33 |     int pos=pq->size-1
+      |         ^~~
+heap.c:29:15: error: unused variable ‘aux’ [-Werror=unused-variable]
+   29 |     heapElem *aux=(heapElem*)malloc(sizeof(heapElem));
+      |               ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+99a4f9b
