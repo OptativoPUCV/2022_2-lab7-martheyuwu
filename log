@@ -455,3 +455,23 @@ heap.c:37:35: error: incompatible types when assigning to type ‘heapElem’ {a
       |                                   ^~~
 Compilation failed
 786a7fb
+Sat 15 Oct 2022 07:04:18 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:29:23: error: ‘nodo’ undeclared (first use in this function)
+   29 |     struct nodo *aux=(nodo*)malloc(sizeof(nodo));
+      |                       ^~~~
+heap.c:29:23: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:29:28: error: expected expression before ‘)’ token
+   29 |     struct nodo *aux=(nodo*)malloc(sizeof(nodo));
+      |                            ^
+heap.c:35:13: error: incompatible types when assigning to type ‘struct nodo *’ from type ‘heapElem’ {aka ‘struct nodo’}
+   35 |         aux=pq->heapArray[pq->size-3/2];
+      |             ^~
+heap.c:37:35: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘struct nodo *’
+   37 |         pq->heapArray[pq->size-2]=aux;
+      |                                   ^~~
+Compilation failed
+6f6a92b
