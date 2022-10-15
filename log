@@ -431,3 +431,27 @@ Sat 15 Oct 2022 07:01:43 PM UTC:
  tests:  3|2
 total_score: 25/70
 8d55749
+Sat 15 Oct 2022 07:03:47 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:29:5: error: unknown type name ‘nodo’; use ‘struct’ keyword to refer to the type
+   29 |     nodo *aux=(nodo*)malloc(sizeof(nodo));
+      |     ^~~~
+      |     struct 
+heap.c:29:16: error: ‘nodo’ undeclared (first use in this function)
+   29 |     nodo *aux=(nodo*)malloc(sizeof(nodo));
+      |                ^~~~
+heap.c:29:16: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:29:21: error: expected expression before ‘)’ token
+   29 |     nodo *aux=(nodo*)malloc(sizeof(nodo));
+      |                     ^
+heap.c:35:13: error: incompatible types when assigning to type ‘int *’ from type ‘heapElem’ {aka ‘struct nodo’}
+   35 |         aux=pq->heapArray[pq->size-3/2];
+      |             ^~
+heap.c:37:35: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘int *’
+   37 |         pq->heapArray[pq->size-2]=aux;
+      |                                   ^~~
+Compilation failed
+786a7fb
