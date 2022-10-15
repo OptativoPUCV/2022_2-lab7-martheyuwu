@@ -26,7 +26,7 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-    struct nodo *aux=(nodo*)malloc(sizeof(nodo));
+    heapElem *aux=(nodo*)malloc(sizeof(nodo));
     pq->heapArray[pq->size].data=data;
     pq->heapArray[pq->size].priority=priority;
     pq->size++;
