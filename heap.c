@@ -35,9 +35,9 @@ void heap_push(Heap* pq, void* data, int priority){
         aux=pq->heapArray[pq->size-2/2];
         pq->heapArray[pq->size-2/2]=pq->heapArray[pq->size-1];
         pq->heapArray[pq->size-1]=aux;
+      }
       else
         break;
-      }
     }
 }
 
