@@ -591,3 +591,18 @@ Sat 15 Oct 2022 07:39:21 PM UTC:
  tests:  5|2
 total_score: 35/70
 2628486
+Sat 15 Oct 2022 07:41:40 PM UTC: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:35:25: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capacity’; did you mean ‘capac’?
+   35 |       if (pq->size==pq->capacity)
+      |                         ^~~~~~~~
+      |                         capac
+heap.c:36:49: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capacity’; did you mean ‘capac’?
+   36 |         pq->heapArray=realloc(pq->heapArray,pq->capacity+1);
+      |                                                 ^~~~~~~~
+      |                                                 capac
+Compilation failed
+c07b543
