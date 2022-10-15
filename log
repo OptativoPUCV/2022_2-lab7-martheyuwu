@@ -274,3 +274,28 @@ heap.c:42:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 Compilation failed
 c438d08
+Sat 15 Oct 2022 06:48:44 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:34:38: error: invalid operands to binary < (have ‘heapElem’ {aka ‘struct nodo’} and ‘heapElem’ {aka ‘struct nodo’})
+   34 |       if (pq->heapArray[pq->size-2/2]<pq->heapArray[pq->size-1]){
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                        |                           |
+      |                        heapElem {aka struct nodo}  heapElem {aka struct nodo}
+heap.c:35:13: error: incompatible types when assigning to type ‘heapElem *’ {aka ‘struct nodo *’} from type ‘heapElem’ {aka ‘struct nodo’}
+   35 |         aux=pq->heapArray[pq->size-2/2];
+      |             ^~
+heap.c:37:35: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘heapElem *’ {aka ‘struct nodo *’}
+   37 |         pq->heapArray[pq->size-1]=aux;
+      |                                   ^~~
+heap.c:38:7: error: expected ‘}’ before ‘else’
+   38 |       else
+      |       ^~~~
+heap.c: At top level:
+heap.c:42:1: error: expected identifier or ‘(’ before ‘}’ token
+   42 | }
+      | ^
+Compilation failed
+6ebe13f
