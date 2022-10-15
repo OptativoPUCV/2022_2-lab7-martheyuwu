@@ -515,3 +515,16 @@ heap.c:29:5: error: conversion to non-scalar type requested
       |     ^~~~~~~~
 Compilation failed
 4c9895d
+Sat 15 Oct 2022 07:21:00 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:35:13: error: incompatible types when assigning to type ‘heapElem *’ {aka ‘struct nodo *’} from type ‘heapElem’ {aka ‘struct nodo’}
+   35 |         aux=pq->heapArray[pq->size-3/2];
+      |             ^~
+heap.c:37:35: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘heapElem *’ {aka ‘struct nodo *’}
+   37 |         pq->heapArray[pq->size-2]=aux;
+      |                                   ^~~
+Compilation failed
+291f158
