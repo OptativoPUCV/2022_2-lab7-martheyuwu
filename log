@@ -1203,3 +1203,9 @@ heap.c:55:3: error: ‘aux’ undeclared (first use in this function)
 heap.c:55:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d719fc6
+Sun 16 Oct 2022 04:45:09 AM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  8|0
+total_score: 70/70
+d8a3883
