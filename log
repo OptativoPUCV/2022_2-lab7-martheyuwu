@@ -1288,3 +1288,18 @@ heap.c:52:7: error: variable ‘aux2’ set but not used [-Werror=unused-but-set
 cc1: all warnings being treated as errors
 Compilation failed
 6cb1df7
+Sun 16 Oct 2022 11:56:47 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:74:80: error: expected identifier before ‘(’ token
+   74 |        if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && (aux2==1){
+      |                                                                                ^
+In file included from test.c:4:
+heap.c:52:7: error: variable ‘aux2’ set but not used [-Werror=unused-but-set-variable]
+   52 |   int aux2;
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+37fdf5e
