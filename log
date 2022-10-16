@@ -1154,3 +1154,18 @@ Sun 16 Oct 2022 04:39:36 AM UTC:
  tests:  7|1
 total_score: 60/70
 e5d8f00
+Sun 16 Oct 2022 04:42:13 AM UTC: 
+ heap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:53:9: error: ‘i’ undeclared (first use in this function)
+   53 |     for(i=0; i<pq->size; i++){
+      |         ^
+heap.c:53:9: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:71:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   71 |   int i;
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+3c20caf
