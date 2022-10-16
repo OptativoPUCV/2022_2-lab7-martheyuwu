@@ -726,3 +726,14 @@ heap.c:52:14: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d5a0cdd
+Sun 16 Oct 2022 12:50:05 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:56:4: error: "/*" within comment [-Werror=comment]
+   56 |    /*while (1){
+      |     
+cc1: all warnings being treated as errors
+Compilation failed
+3abf88e
