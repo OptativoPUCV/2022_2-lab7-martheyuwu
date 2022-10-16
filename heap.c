@@ -63,7 +63,12 @@ void heap_pop(Heap* pq){
            pq->heapArray[2*pos+2]=aux[0];
            pos=2*pos+2;
   }
-  view_array(pq);
+  int i;
+    printf("\t[");
+    for(i=0; i<h->size; i++){
+        printf("%d ",h->heapArray[i].priority);
+    }
+    printf("]\n");
 }
 
 Heap* createHeap(){
