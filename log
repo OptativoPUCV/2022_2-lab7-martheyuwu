@@ -778,3 +778,82 @@ heap.c:24:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 344c868
+Sun 16 Oct 2022 12:53:22 AM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:5: error: expected declaration specifiers before ‘if’
+   21 |     if (pq->size==0)
+      |     ^~
+heap.c:23:5: error: expected declaration specifiers before ‘return’
+   23 |     return pq->heapArray[0].data;
+      |     ^~~~~~
+heap.c:24:1: error: expected declaration specifiers before ‘}’ token
+   24 | }
+      | ^
+heap.c:28:51: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   28 | void heap_push(Heap* pq, void* data, int priority){
+      |                                                   ^
+heap.c:51:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   51 | void heap_pop(Heap* pq){
+      |                        ^
+In file included from test.c:4:
+heap.c:76:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   76 | Heap* createHeap(){
+      |                   ^
+test.c:6:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+    6 | char * _strdup(const char * str) {
+      |                                  ^
+test.c:13:1: error: parameter ‘test_id’ is initialized
+   13 | int test_id = -1;
+      | ^~~
+test.c:16:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   16 | int success(){
+      |              ^
+test.c:21:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   21 | void err_msg(char* msg){
+      |                        ^
+test.c:28:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   28 | void ok_msg(char* msg){
+      |                       ^
+test.c:34:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   34 | void info_msg(char* msg){
+      |                         ^
+test.c:39:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   39 | int test_suite(int(*test)(), char* msg, int max_score, int id, int req_id){
+      |                                                                           ^
+test.c:55:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   55 | void view_array(Heap* h){
+      |                         ^
+test.c:64:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   64 | Heap* initialize_heap(){
+      |                        ^
+test.c:80:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   80 | int test_create(){
+      |                  ^
+test.c:116:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  116 | int test_top(){
+      |               ^
+test.c:145:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  145 | int test_push(){
+      |                ^
+test.c:222:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  222 | int test_pop(){
+      |               ^
+test.c:276:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  276 | int main( int argc, char *argv[] ) {
+      |                                    ^
+In file included from test.c:4:
+heap.c:20:7: error: old-style parameter declarations in prototyped function definition
+   20 | void* heap_top(Heap* pq)
+      |       ^~~~~~~~
+test.c:292: error: expected ‘{’ at end of input
+  292 | }
+      | 
+test.c:292: error: control reaches end of non-void function [-Werror=return-type]
+  292 | }
+      | 
+cc1: all warnings being treated as errors
+Compilation failed
+cb985f5
