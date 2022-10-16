@@ -1148,3 +1148,9 @@ heap.c:68:16: error: ‘h’ undeclared (first use in this function)
 heap.c:68:16: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 403dbe2
+Sun 16 Oct 2022 04:39:36 AM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  7|1
+total_score: 60/70
+e5d8f00
