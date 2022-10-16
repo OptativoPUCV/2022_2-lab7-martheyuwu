@@ -706,3 +706,9 @@ test.c:(.text+0x82b): undefined reference to `heap_pop'
 collect2: error: ld returned 1 exit status
 Compilation failed
 81540d8
+Sun 16 Oct 2022 12:43:16 AM UTC: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  7|1
+total_score: 45/70
+81e3fb2

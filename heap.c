@@ -48,8 +48,8 @@ void heap_push(Heap* pq, void* data, int priority){
 }
 
 
-/*void heap_pop(Heap* pq){
-   heapElem *aux=(heapElem*)malloc(sizeof(heapElem));
+void heap_pop(Heap* pq){
+   /*heapElem *aux=(heapElem*)malloc(sizeof(heapElem));
    int pos=0;
    pq->heapArray[0]=pq->heapArray[pq->size-1];
    pq->size--;
@@ -69,8 +69,8 @@ void heap_push(Heap* pq, void* data, int priority){
        else
          break;
      }
-   }
-}*/
+   }*/
+}
 
 Heap* createHeap(){
   Heap *crear=(Heap*)malloc(sizeof(Heap));
