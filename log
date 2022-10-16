@@ -976,3 +976,9 @@ heap.c:53:8: error: unused variable ‘pos’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 78df232
+Sun 16 Oct 2022 03:56:31 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 45/70
+6b80b05
