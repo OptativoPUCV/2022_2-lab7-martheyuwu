@@ -1011,3 +1011,14 @@ heap.c:57:135: error: suggest parentheses around ‘&&’ within ‘||’ [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 aad4c40
+Sun 16 Oct 2022 04:17:40 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:57:135: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+   57 |        if (pq->heapArray[pos].priority<pq->heapArray[2*pos+1].priority || pq->heapArray[pos].priority<pq->heapArray[2*pos+2].priority && (pq->size>1)){
+      |                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6602ddd
