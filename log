@@ -965,3 +965,14 @@ heap.c:52:14: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 9d2564c
+Sun 16 Oct 2022 03:56:24 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:53:8: error: unused variable ‘pos’ [-Werror=unused-variable]
+   53 |    int pos=0;
+      |        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+78df232
