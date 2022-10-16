@@ -1192,3 +1192,14 @@ Sun 16 Oct 2022 04:44:46 AM UTC:
  tests:  8|0
 total_score: 70/70
 43d9d04
+Sun 16 Oct 2022 04:44:58 AM UTC: 
+ heap.c | 6 ------
+ 1 file changed, 6 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:55:3: error: ‘aux’ undeclared (first use in this function)
+   55 |   aux[0]=pq->heapArray[pos];
+      |   ^~~
+heap.c:55:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d719fc6
