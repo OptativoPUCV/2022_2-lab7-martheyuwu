@@ -1169,3 +1169,14 @@ heap.c:71:7: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3c20caf
+Sun 16 Oct 2022 04:42:24 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:71:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   71 |   int i;
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+24f4003
