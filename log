@@ -1303,3 +1303,9 @@ heap.c:52:7: error: variable ‘aux2’ set but not used [-Werror=unused-but-set
 cc1: all warnings being treated as errors
 Compilation failed
 37fdf5e
+Sun 16 Oct 2022 11:57:11 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 60/70
+7b1745b
