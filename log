@@ -857,3 +857,9 @@ test.c:292: error: control reaches end of non-void function [-Werror=return-type
 cc1: all warnings being treated as errors
 Compilation failed
 cb985f5
+Sun 16 Oct 2022 12:53:34 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 45/70
+61c44ee
