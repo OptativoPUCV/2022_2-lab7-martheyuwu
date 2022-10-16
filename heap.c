@@ -50,6 +50,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
    heapElem *aux=(heapElem*)malloc(sizeof(heapElem));
+  int i;
+    printf("\t[");
+    for(i=0; i<h->size; i++){
+        printf("%d ",h->heapArray[i].priority);
+    }
+    printf("]\n");
    int pos=0;
    pq->heapArray[0]=pq->heapArray[pq->size-1];
    pq->size--;

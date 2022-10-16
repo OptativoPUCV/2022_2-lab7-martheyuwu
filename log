@@ -1215,3 +1215,14 @@ Sun 16 Oct 2022 11:51:54 PM UTC:
  tests:  7|1
 total_score: 60/70
 01b5a2e
+Sun 16 Oct 2022 11:53:58 PM UTC: 
+ heap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:55:16: error: ‘h’ undeclared (first use in this function)
+   55 |     for(i=0; i<h->size; i++){
+      |                ^
+heap.c:55:16: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+9368713
