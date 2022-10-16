@@ -694,3 +694,15 @@ heap.c:64:48: error: invalid operands to binary < (have ‘int’ and ‘heapEle
       |                                       int                    heapElem {aka struct nodo}
 Compilation failed
 7627c69
+Sun 16 Oct 2022 12:42:31 AM UTC: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/cc6WUwo8.o: in function `test_pop':
+test.c:(.text+0x82b): undefined reference to `heap_pop'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0x857): undefined reference to `heap_pop'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0x879): undefined reference to `heap_pop'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0x89b): undefined reference to `heap_pop'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0x8bd): undefined reference to `heap_pop'
+collect2: error: ld returned 1 exit status
+Compilation failed
+81540d8
