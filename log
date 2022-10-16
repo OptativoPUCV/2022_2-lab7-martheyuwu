@@ -1232,3 +1232,34 @@ Sun 16 Oct 2022 11:54:07 PM UTC:
  tests:  7|1
 total_score: 60/70
 73884b6
+Sun 16 Oct 2022 11:56:00 PM UTC: 
+ heap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:53:14: error: conflicting types for ‘aux’
+   53 |    heapElem *aux=(heapElem*)malloc(sizeof(heapElem));
+      |              ^~~
+heap.c:52:7: note: previous declaration of ‘aux’ was here
+   52 |   int aux;
+      |       ^~~
+heap.c:66:10: error: assignment to ‘heapElem *’ {aka ‘struct nodo *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   66 |       aux=1;
+      |          ^
+In file included from test.c:4:
+heap.c:74:83: error: comparison between pointer and integer [-Werror]
+   74 |        if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && aux==1{
+      |                                                                                   ^~
+heap.c:74:83: error: statement with no effect [-Werror=unused-value]
+   74 |        if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && aux==1{
+      |                                                                             ~~~~~~^~~
+heap.c:74:86: error: expected ‘;’ before ‘{’ token
+   74 |        if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && aux==1{
+      |                                                                                      ^
+      |                                                                                      ;
+heap.c:74:8: error: label ‘aux’ used but not defined
+   74 |        if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && aux==1{
+      |        ^~
+cc1: all warnings being treated as errors
+Compilation failed
+81d6335
