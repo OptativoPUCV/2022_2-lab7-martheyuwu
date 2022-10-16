@@ -53,8 +53,7 @@ void heap_pop(Heap* pq){
    int pos=0;
    pq->heapArray[0]=pq->heapArray[pq->size-1];
    pq->size--;
-  if (pq->size!=1){
-     while (1){
+    (for int i=0;i<3;i++){
        if (pq->heapArray[pos].priority<pq->heapArray[2*pos+1].priority || pq->heapArray[pos].priority<pq->heapArray[2*pos+2].priority){
          aux[0]=pq->heapArray[pos];
          if (pq->heapArray[2*pos+1].priority>pq->heapArray[2*pos+2].priority){
@@ -70,8 +69,7 @@ void heap_pop(Heap* pq){
        }
        else
          break;
-     }
-  }
+    }
 }
 
 Heap* createHeap(){
