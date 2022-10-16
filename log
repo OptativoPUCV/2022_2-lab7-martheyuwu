@@ -1180,3 +1180,9 @@ heap.c:71:7: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 24f4003
+Sun 16 Oct 2022 04:42:30 AM UTC: 
+ heap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  7|1
+total_score: 60/70
+fd1c7a6
