@@ -49,7 +49,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){\
-  int aux;
+  int aux2;
    heapElem *aux=(heapElem*)malloc(sizeof(heapElem));
   int i;
     printf("\t[");
@@ -63,15 +63,15 @@ void heap_pop(Heap* pq){\
   aux[0]=pq->heapArray[pos];
   if (pq->size>1){
     while (1){
-      aux=1;
+      aux2=1;
       if (pq->heapArray[2*pos+1].priority>pq->heapArray[pos].priority || pq->heapArray[2*pos+2].priority>pq->heapArray[pos].priority){
        if (pq->heapArray[2*pos+1].priority>pq->heapArray[2*pos+2].priority){
              pq->heapArray[pos]=pq->heapArray[2*pos+1];
              pq->heapArray[2*pos+1]=aux[0];
              pos=2*pos+1;
-            aux=0;
+            aux2=0;
         }
-       if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && aux==1{
+       if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && aux2==1{
                  pq->heapArray[pos]=pq->heapArray[2*pos+2];
                  pq->heapArray[2*pos+2]=aux[0];
                  pos=2*pos+2;
