@@ -49,6 +49,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
+  int i;
+    printf("\t[");
+    for(i=0; i<pq->size; i++){
+        printf("%d ",pq->heapArray[i].priority);
+    }
+    printf("]\n");
    heapElem *aux=(heapElem*)malloc(sizeof(heapElem));
    int pos=0;
    pq->heapArray[0]=pq->heapArray[pq->size-1];
@@ -59,12 +65,22 @@ void heap_pop(Heap* pq){
      if (pq->heapArray[2*pos+1].priority>pq->heapArray[2*pos+2].priority && pq->heapArray[pos].priority<pq->heapArray[2*pos+1].priority){
            pq->heapArray[pos]=pq->heapArray[2*pos+1];
            pq->heapArray[2*pos+1]=aux[0];
-           pos=2*pos+1;       
+           pos=2*pos+1;
+          printf("\t[");
+          for(i=0; i<pq->size; i++){
+              printf("%d ",pq->heapArray[i].priority);
+          }
+          printf("]\n");
       }
       else if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority && pq->heapArray[pos].priority<pq->heapArray[2*pos+2].priority){
                pq->heapArray[pos]=pq->heapArray[2*pos+2];
                pq->heapArray[2*pos+2]=aux[0];
                pos=2*pos+2;
+                printf("\t[");
+              for(i=0; i<pq->size; i++){
+                  printf("%d ",pq->heapArray[i].priority);
+              }
+              printf("]\n");
       }
       else
         break;
