@@ -62,7 +62,7 @@ void heap_pop(Heap* pq){
   aux[0]=pq->heapArray[pos];
   if (pq->size>1){
     while (1){
-     if (pq->heapArray[2*pos+1].priority>pq->heapArray[2*pos+2].priority && pq->heapArray[pos].priority<pq->heapArray[2*pos+1].priority){
+     if ((pq->heapArray[2*pos+1].priority>pq->heapArray[2*pos+2].priority) && (pq->heapArray[pos].priority<pq->heapArray[2*pos+1].priority) && (2*pos+1<=pq->size-1)){
            pq->heapArray[pos]=pq->heapArray[2*pos+1];
            pq->heapArray[2*pos+1]=aux[0];
            pos=2*pos+1;
@@ -72,7 +72,7 @@ void heap_pop(Heap* pq){
           }
           printf("]\n");
       }
-      else if (pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority && pq->heapArray[pos].priority<pq->heapArray[2*pos+2].priority){
+      else if ((pq->heapArray[2*pos+1].priority<pq->heapArray[2*pos+2].priority) && (pq->heapArray[pos].priority<pq->heapArray[2*pos+2].priority) && (2*pos+1<=pq->size-1)){
                pq->heapArray[pos]=pq->heapArray[2*pos+2];
                pq->heapArray[2*pos+2]=aux[0];
                pos=2*pos+2;
